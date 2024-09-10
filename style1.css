@@ -1,0 +1,37 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #62166f;
+    background-image: url(bunga4.jpeg);
+    line-height: 1.65;
+    padding-bottom: 1000px;
+}
+
+.container-satu {
+    width: 800px;
+    margin: 50px auto;
+    background-color: #9d5e92;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex; /* Added flex display */
+}
+
+.sidebar-satu {
+    flex: 1;
+    order: 1;
+} 
+
+.kolom-utama {
+    flex: 2;
+    order: 2;
+}
+
+.sidebar-dua {
+    flex: 1;
+    order: 3;
+}
+
