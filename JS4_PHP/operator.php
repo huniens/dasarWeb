@@ -51,4 +51,9 @@ echo "Hasil multiplication: {$hasilMultiplication} <br>";
 echo "Hasil division: {$hasilDivision} <br>";
 echo "Hasil remainder divided by: {$hasilRemainderDividedBy} <br>";
 
+$hasilIdentical = $a === $b;
+$hasilNotIdentical = $a !== $b;
+
+echo "Hasil Identical: {$hasilIdentical} <br>";
+echo "Hasil Not Identical: {$hasilNotIdentical} <br>";
 ?>
