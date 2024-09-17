@@ -28,4 +28,14 @@ echo "Hasil kali: {$hasilLebihKecil} <br>";
 echo "Sisa bagi: {$hasilLebihBesar} <br>";
 echo "Lebih kecil sama: {$hasilLebihKecilSama} <br>";
 echo "Lebih besar sama: {$hasilLebihBesarSama} <br>";
+
+$hasilAnd = $a && $b;
+$hasilor = $a || $b;
+$hasilNotA = !$a;
+$hasilNotB = !$b;
+
+echo "Hasil and: {$hasilAnd} <br>";
+echo "Hasil or: {$hasilor} <br>";
+echo "Hasil not A: {$hasilNotA} <br>";
+echo "Hasil not B: {$hasilNotB} <br>";
 ?>
