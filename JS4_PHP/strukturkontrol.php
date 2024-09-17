@@ -37,4 +37,13 @@ $jumlahBuah += ($tanamanPerLahan * $buahPerTanaman);
 echo"<br>";
 echo "Jumlah buah yang akan dipanen adalah: $jumlahBuah";
 
+$skorUjian = [85, 92, 78, 96, 88];
+$totalSkor = 0;
+
+foreach ($skorUjian as $skor) {
+    $totalSkor += $skor;
+}
+echo"<br>";
+echo "Total skor ujian adalah: $totalSkor";
+
 ?>  
