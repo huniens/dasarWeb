@@ -38,4 +38,17 @@ echo "Hasil and: {$hasilAnd} <br>";
 echo "Hasil or: {$hasilor} <br>";
 echo "Hasil not A: {$hasilNotA} <br>";
 echo "Hasil not B: {$hasilNotB} <br>";
+
+$hasilSummation = $a += $b;
+$hasilSubtraction = $a -= $b;
+$hasilMultiplication = $a *= $b;
+$hasilDivision = $a /= $b;
+$hasilRemainderDividedBy = $a %= $b;
+
+echo "Hasil summation: {$hasilSummation} <br>";
+echo "Hasil subtraction: {$hasilSubtraction} <br>";
+echo "Hasil multiplication: {$hasilMultiplication} <br>";
+echo "Hasil division: {$hasilDivision} <br>";
+echo "Hasil remainder divided by: {$hasilRemainderDividedBy} <br>";
+
 ?>
