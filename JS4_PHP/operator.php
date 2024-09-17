@@ -16,3 +16,4 @@ echo "Sisa bagi: {$sisaBagi} <br>";
 echo "Pangkat: {$pangkat} <br>";
 
 ?>
+//first commit
