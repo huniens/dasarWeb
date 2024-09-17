@@ -55,4 +55,4 @@ foreach ($nilaiSiswa as $nilai) {
     }
     echo "Nilai: $nilai (Lulus) <br>";
 }
-?>  
+?>
