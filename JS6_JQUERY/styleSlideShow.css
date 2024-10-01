@@ -22,7 +22,7 @@
     padding: 10px;
     -webkit-border-radius: 0px 0px 5px 5px;
     border-radius: 0px 0px 5px 5px;
-    -moz-border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
     color: #FFF;
     background-color: rgba(12, 22, 23, 0.50);
 }
