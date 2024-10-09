@@ -15,8 +15,13 @@
     <input type="text" id="email" name="email">
     <span id="email-error" style="color: red;"></span><br>
 
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <span id="password-error" style="color: red;"></span><br>
+
     <input type="submit" value="Submit">
 </form>
+
 <script>
     $(document).ready(function() {
         $("#myform").submit(function(event) {
@@ -24,8 +29,10 @@
 
             var nama = $("#nama").val();
             var email = $("#email").val();
+            var password = $("#password").val(); // Get the password value
             var valid = true;
 
+            // Validate name
             if (nama === "") {
                 $("#nama-error").text("Nama harus diisi.");
                 valid = false;
@@ -33,11 +40,20 @@
                 $("#nama-error").text("");
             }
 
+            // Validate email
             if (email === "") {
                 $("#email-error").text("Email harus diisi.");
                 valid = false;
             } else {
                 $("#email-error").text("");
+            }
+
+            // Validate password
+            if (password.length < 8) {
+                $("#password-error").text("Password harus minimal 8 karakter.");
+                valid = false;
+            } else {
+                $("#password-error").text("");
             }
 
             if (valid) {
@@ -47,7 +63,8 @@
                     type: "POST",
                     data: {
                         nama: nama,
-                        email: email
+                        email: email,
+                        password: password // Send the password
                     },
                     success: function(response) {
                         alert("Form submitted successfully!"); // Show success message
