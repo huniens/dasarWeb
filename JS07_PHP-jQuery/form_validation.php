@@ -20,6 +20,8 @@
 <script>
     $(document).ready(function() {
         $("#myform").submit(function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
             var nama = $("#nama").val();
             var email = $("#email").val();
             var valid = true;
@@ -38,9 +40,23 @@
                 $("#email-error").text("");
             }
 
-            if (!valid) {
-                event.preventDefault(); 
-                // Menghentikan pengiriman form jika validasi gagal
+            if (valid) {
+                // If valid, send data using AJAX
+                $.ajax({
+                    url: "form_validation.php", // Server-side PHP file
+                    type: "POST",
+                    data: {
+                        nama: nama,
+                        email: email
+                    },
+                    success: function(response) {
+                        alert("Form submitted successfully!"); // Show success message
+                        console.log(response); // Log response from server
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("Error: " + error); // Log error message if any
+                    }
+                });
             }
         });
     });
