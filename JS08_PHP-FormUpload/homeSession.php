@@ -8,12 +8,12 @@
         if ($_SESSION['status'] == 'login') {
             echo "Selamat datang " . $_SESSION['username'];
         ?>
-            echo "<br><a href='sessionLogout.php'>Logout</a>";
+            <br><a href='sessionLogout.php'>Logout</a>
         <?php
         } else {
             echo "Anda belum login, silahkan";
         ?>
-            echo "<a href='sessionLoginForm.html'>Login</a>";
+            <a href='sessionLoginForm.html'>Login</a>
         <?php
         }
         ?>
