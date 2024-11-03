@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huniens Bakery</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Pastel theme colors */
+    .bg-light-pink { background-color: #ffebee; } /* Light pink */
+    .bg-light-yellow { background-color: #fff8e1; } /* Light yellow */
+    .bg-light-purple { background-color: #f3e5f5; } /* Light purple */
+    .navbar, footer { background-color: #f8bbd0; } /* Light pink */
+    .jumbotron { background-color: #fff8e1; } /* Light yellow */
+    .card { border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+
+    /* Fixed height and layout settings */
+    .product-image { height: 200px; object-fit: cover; }
+    .card-body { min-height: 150px; display: flex; flex-direction: column; justify-content: space-between; }
+    .card-title { font-size: 1.2em; margin-bottom: 10px; }
+    .card-text { flex-grow: 1; } /* Ensures consistent spacing */
+  </style>
+</head>
+<body>
+
+  <!-- Navbar with Dropdown Menu -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand font-weight-bold" href="#">Huniens Bakery</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+            Menu
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#home">Home</a>
+            <a class="dropdown-item" href="#products">Products</a>
+            <a class="dropdown-item" href="#about">About Us</a>
+            <a class="dropdown-item" href="#contact">Contact</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Jumbotron - Home Section -->
+  <div id="home" class="jumbotron text-center text-dark">
+    <h1 class="display-4 font-weight-bold">Welcome to Huniens Bakery</h1>
+    <p class="lead">Delicious cakes with a unique taste, made from natural and high-quality ingredients.</p>
+    <a class="btn btn-lg" href="#products" role="button" style="background-color: #f8bbd0; color: #fff;">Explore Products</a>
+  </div>
+
+  <!-- Products Section -->
+  <div id="products" class="container my-5">
+    <h2 class="text-center font-weight-bold" style="color: #d81b60;">Our Best Products</h2>
+    <p class="text-center">Discover our range of sweet treats, crafted with love and the finest ingredients.</p>
+    <div class="row mt-4">
+      
+      <!-- Strawberry Cake Card -->
+      <div class="col-md-4">
+        <div class="card bg-light-pink">
+          <img src="strawberry.jpeg" class="card-img-top product-image" alt="Strawberry Cake">
+          <div class="card-body text-center">
+            <h5 class="card-title font-weight-bold" style="color: #d81b60;">Strawberry Cake</h5>
+            <p class="card-text">A soft cake topped with fresh strawberries.</p>
+            <button class="btn btn-sm" style="background-color: #d81b60; color: #fff;" data-toggle="modal" data-target="#strawberryModal">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chocolate Cake Card -->
+      <div class="col-md-4">
+        <div class="card bg-light-yellow">
+          <img src="cho.jpeg" class="card-img-top product-image" alt="Chocolate Cake">
+          <div class="card-body text-center">
+            <h5 class="card-title font-weight-bold" style="color: #d81b60;">Chocolate Cake</h5>
+            <p class="card-text">Rich chocolate flavor that melts in your mouth.</p>
+            <button class="btn btn-sm" style="background-color: #d81b60; color: #fff;" data-toggle="modal" data-target="#chocolateModal">View Details</button>
+          </div>    
+        </div>
+      </div>
+
+      <!-- Cheese Cake Card -->
+      <div class="col-md-4">
+        <div class="card bg-light-purple">
+          <img src="cheese.jpeg" class="card-img-top product-image" alt="Cheese Cake">
+          <div class="card-body text-center">
+            <h5 class="card-title font-weight-bold" style="color: #d81b60;">Cheese Cake</h5>
+            <p class="card-text">A soft cheese cake with unparalleled richness.</p>
+            <button class="btn btn-sm" style="background-color: #d81b60; color: #fff;" data-toggle="modal" data-target="#cheeseModal">View Details</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal for Strawberry Cake -->
+  <div class="modal fade" id="strawberryModal" tabindex="-1" aria-labelledby="strawberryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="strawberryModalLabel">Strawberry Cake</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          This delightful strawberry cake is topped with fresh strawberries and a light cream frosting. Perfect for all strawberry lovers!
+          <p><strong>Price:</strong> 15.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Chocolate Cake -->
+  <div class="modal fade" id="chocolateModal" tabindex="-1" aria-labelledby="chocolateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="chocolateModalLabel">Chocolate Cake</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          A rich chocolate cake with a melt-in-your-mouth texture. Made with high-quality cocoa for an unforgettable flavor.
+          <p><strong>Price:</strong> 18.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Cheese Cake -->
+  <div class="modal fade" id="cheeseModal" tabindex="-1" aria-labelledby="cheeseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cheeseModalLabel">Cheese Cake</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Creamy and smooth, this cheese cake offers the perfect balance of sweetness and texture. A true classic!
+          <p><strong>Price:</strong> 20.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Us Section -->
+  <div id="about" class="container my-5">
+    <h2 class="text-center font-weight-bold" style="color: #d81b60;">About Us</h2>
+    <p class="text-center">Huniens Bakery is a family-owned bakery specializing in handcrafted cakes and pastries. With a passion for perfection and love for baking, we aim to bring joy to every bite.</p>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="container my-5">
+    <h2 class="text-center font-weight-bold" style="color: #d81b60;">Contact Us</h2>
+    <p class="text-center">We would love to hear from you! Feel free to reach out for any inquiries or custom orders.</p>
+    <div class="text-center">
+      <p><strong>Email:</strong> huniensbakery@gmail.com</p>
+      <p><strong>Phone:</strong> +0895 7125 40107</p>
+      <p><strong>Address:</strong> Jl. Pisang Kipas</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 text-white">
+    <p class="mb-0 font-weight-bold">&copy; 2024 Huniens Bakery. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
