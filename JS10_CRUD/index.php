@@ -7,7 +7,7 @@
 <body>
     <div class="container mt-4">
         <h2>Data Anggota</h2>
-        <a class="btn btn-success mt-2" href="tambah.php">Tambah Data</a>
+        <a class="btn btn-success mt-2" href="create.php">Tambah Data</a>
 
         <br><br>
         <?php
