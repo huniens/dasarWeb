@@ -29,7 +29,7 @@ else if($aksi == 'ubah') {
     } else {
         echo "ID tidak valid.";
     }
-}
+}   
 
 elseif($aksi == 'hapus') {
     if (isset($_GET['id'])) {
