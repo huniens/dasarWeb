@@ -14,11 +14,13 @@ class Animal {
         return $this->name;
     }
 
-    protected function getAge() {
+    // Mengubah visibilitas dari protected ke public
+    public function getAge() {
         return $this->age;
     }
 
-    private function getColor() {
+    // Mengubah visibilitas dari private ke public
+    public function getColor() {
         return $this->color;
     }
 }
