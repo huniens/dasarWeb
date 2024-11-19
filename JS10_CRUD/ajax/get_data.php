@@ -10,6 +10,7 @@ $sql->bind_param('i', $id);
 $sql->execute();
 $res1 = $sql->get_result();
 
+$h = array();
 while ($row = $res1->fetch_assoc()) {
     $h['id'] = $row["id"];
     $h['nama'] = $row["nama"];
